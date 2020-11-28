@@ -60,7 +60,7 @@
       	<!-- Définition de la table contenant les objets de la calculatrice -->
       	<table border="1"> 
          	<tr> 
-            	<td colspan="3"><input onkeydown="evenement_clavier()" onfocus="couleur(this)" id="output"/></td>
+            	<td colspan="3"><input onkeyup="evenement_clavier()" onfocus="couleur(this)" id="output"/></td>
 				<!-- L'évènement onkeydown permet de déclencher la fonction quand l'utilisateur presse une touche 
 				tandis qu'avec onkeyup, cela se décleche lorsque la touche est lâchée -->
             	<td><button onclick="effacer()">c</button></td> 
