@@ -52,25 +52,34 @@
          	}         
      	 </script>
 
+     	<!-- Définition du style des boutons de la calculatrice: 
+     	les boutons remplissent l'intégralité de chaque cellule de la table -->
       	<style>
         	td button{width:100%}
       	</style>
     </head> 
+    <!-- L'évènement onload s'exécute lorsqu'un élément est en train de se charger.
+    	Ici, lorsque la page web charge, la fonction intro se déclenche. -->
     <body onload= intro()> 
-      	<!-- Définition de la table contenant les objets de la calculatrice -->
+      	<!-- Définition de la table contenant les objets de la calculatrice, 
+      	la balise border définit que les bordures des cellules ont une épaisseur de 1 -->
       	<table border="1"> 
          	<tr> 
-            	<td colspan="3"><input onkeyup="evenement_clavier()" onfocus="couleur(this)" id="output"/></td>
-				<!-- L'évènement onkeydown permet de déclencher la fonction quand l'utilisateur presse une touche 
+         		<!-- L'évènement onkeydown permet de déclencher la fonction quand l'utilisateur presse une touche 
 				tandis qu'avec onkeyup, cela se décleche lorsque la touche est lâchée -->
+            	<td colspan="3"><input onkeyup="evenement_clavier()" onfocus="couleur(this)" id="output"/></td>
+				<!-- L'évènement onclick lance la fonction associée lorsqu'un certain bouton est pressé (sur la calculatrice) -->
             	<td><button onclick="effacer()">c</button></td> 
-         	</tr> 
+         	</tr>
+         		<!-- L'évènement onmouseenter déclenche la fonction associée lorsque la pointeur de la souris est placé sur un objet. 
+         		Au contraire, onmouseleave déclenche la fonction associée lorsque le pointeur sort de l'objet sur lequel il était placé. --> 
          	<tr> 
             	<td><button onmouseenter = "couleur_bouton1(this)" onmouseleave = "couleur_bouton2(this)" onclick="afficher('1')">1</button></td> 
             	<td><button onclick="afficher('2')">2</button></td> 
             	<td><button onclick="afficher('3')">3</button></td> 
             	<td><button onclick="afficher('+')">+</button></td> 
          	</tr> 
+         	
          	<tr> 
             	<td><button onclick="afficher('4')">4</button></td> 
             	<td><button onclick="afficher('5')">5</button></td> 
@@ -90,6 +99,5 @@
             	<td><button onclick="afficher('/')">/</button></td> 
          	</tr> 
       	</table> 
-      	<!-- La balise onclick lance la fonction associée lorsqu'un certain bouton est pressé (sur la calculatrice) -->
    	</body> 
 </html>
