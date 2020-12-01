@@ -28,7 +28,7 @@
          	} 
       
 			// Fonction qui modifie la couleur de fond du formulaire
-        	function couleur(x) 
+        	function couleur_fond(x) 
          	{
              	x.style.background = "#A5E4FA";
          	} 
@@ -67,7 +67,7 @@
          	<tr> 
          		<!-- L'évènement onkeydown permet de déclencher la fonction quand l'utilisateur presse une touche 
 				tandis qu'avec onkeyup, cela se décleche lorsque la touche est lâchée -->
-            	<td colspan="3"><input onkeyup="evenement_clavier()" onfocus="couleur(this)" id="output"/></td>
+            	<td colspan="3"><input onkeyup="evenement_clavier()" onfocus="couleur_fond(this)" id="output"/></td>
 				<!-- L'évènement onclick lance la fonction associée lorsqu'un certain bouton est pressé (sur la calculatrice) -->
             	<td><button onclick="effacer()">c</button></td> 
          	</tr>
