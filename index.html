@@ -4,37 +4,37 @@
         	//Fonction qui affiche la valeur
          	function afficher(val) 
          	{ 
-            		document.getElementById("output").value+=val 
+            	document.getElementById("output").value+=val;
          	} 
 
         	//Fonction qui efface l'écran 
          	function effacer() 
          	{ 
-             		document.getElementById("output").value = "" 
+             	document.getElementById("output").value = "";
          	}
 
         	//La fonction eval() permet d'évaluer du code JavaScript représenté sous forme d'une chaîne de caractères.
          	function calculer() 
          	{ 
-             		let a = document.getElementById("output").value 
-             		let b = eval(a) 
-             		document.getElementById("output").value = b 
+             	let a = document.getElementById("output").value;
+             	let b = eval(a);
+             	document.getElementById("output").value = b;
          	} 
 
         	// Fonction qui affiche un message d'introduction dès le chargement de la page web
-		function intro() 
+			function intro() 
          	{ 
             	alert("Voici ma première calculatrice HTML et JavaScript !");
          	} 
       
-		// Fonction qui modifie la couleur de fond du formulaire
+			// Fonction qui modifie la couleur de fond du formulaire
         	function couleur_fond(x) 
          	{
-             		x.style.background = "#A5E4FA";
+             	x.style.background = "#A5E4FA";
          	} 
 
         	// Fonction qui affiche un message pop-up lorsqu'une touche du clavier est pressée
-		function evenement_clavier() 
+			function evenement_clavier() 
          	{
           		alert("Tu as appuyé sur une touche du clavier !");
          	}
@@ -58,15 +58,15 @@
         	td button{width:100%}
       	</style>
     </head> 
-    <!-- L'évènement onload s'exécute lorsqu'un élément est en train de se charger.
-    	Ici, lorsque la page web charge, la fonction intro se déclenche. -->
+    <!-- Évènement qui, lorsque la page web charge, la fonction intro se déclenche et affiche le message. -->
     <body onload= intro()> 
       	<!-- Définition de la table contenant les objets de la calculatrice, 
       	la balise border définit que les bordures des cellules ont une épaisseur de 1 -->
       	<table border="1"> 
          	<tr> 
          		<!-- L'évènement onkeydown permet de déclencher la fonction quand l'utilisateur presse une touche 
-				tandis qu'avec onkeyup, cela se décleche lorsque la touche est lâchée -->
+				tandis qu'avec onkeyup, cela se décleche lorsque la touche est lâchée.
+				L'évènement colspan définit le nombre de colonnes que la zone input couvre. -->
             	<td colspan="3"><input onkeyup="evenement_clavier()" onfocus="couleur_fond(this)" id="output"/></td>
 				<!-- L'évènement onclick lance la fonction associée lorsqu'un certain bouton est pressé (sur la calculatrice) -->
             	<td><button onclick="effacer()">c</button></td> 
