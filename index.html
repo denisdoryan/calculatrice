@@ -22,13 +22,13 @@
          	} 
 
         	// Fonction qui affiche un message d'introduction dès le chargement de la page web
-			function intro() 
+			function message_intro() 
          	{ 
             	alert("Voici ma première calculatrice HTML et JavaScript !");
          	} 
       
 			// Fonction qui modifie la couleur de fond du formulaire
-        	function couleur_fond(x) 
+        	function couleur_formulaire(x) 
          	{
              	x.style.background = "#A5E4FA";
          	} 
@@ -59,7 +59,7 @@
       	</style>
     </head> 
     <!-- Évènement qui, lorsque la page web charge, la fonction intro se déclenche et affiche le message. -->
-    <body onload= intro()> 
+    <body onload= message_intro()> 
       	<!-- Définition de la table contenant les objets de la calculatrice, 
       	la balise border définit que les bordures des cellules ont une épaisseur de 1 -->
       	<table border="1"> 
@@ -67,7 +67,7 @@
          		<!-- L'évènement onkeydown permet de déclencher la fonction quand l'utilisateur presse une touche 
 				tandis qu'avec onkeyup, cela se décleche lorsque la touche est lâchée.
 				L'évènement colspan définit le nombre de colonnes que la zone input couvre. -->
-            	<td colspan="3"><input onkeyup="evenement_clavier()" onfocus="couleur_fond(this)" id="output"/></td>
+            	<td colspan="3"><input onkeyup="evenement_clavier()" onfocus="couleur_formulaire(this)" id="output"/></td>
 				<!-- L'évènement onclick lance la fonction associée lorsqu'un certain bouton est pressé (sur la calculatrice) -->
             	<td><button onclick="effacer()">c</button></td> 
          	</tr>
